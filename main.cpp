@@ -1,9 +1,11 @@
 #include <iostream>
+#include "funcs.h"
+
 using namespace std;
 
 int main() // Skeleton of main function
 {
-	float a, b;
+	double a, b;
 	int choose = 0;
 	setlocale(LC_ALL, "Russian");
 	
@@ -31,7 +33,7 @@ int main() // Skeleton of main function
 	{
 	case 1:
 	{
-		std::cout << "Операция уже разрабатывается!" << std::endl;
+		std::cout << "A + B = " << funcSum(a,b) << std::endl;
 		system("pause");
 		break;
 	}
