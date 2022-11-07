@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         GIJ
+// @name         GIJforAAAAA
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Bruhable
@@ -55,6 +55,40 @@
 
         input.click();
     }
+    function merge() { // ---------------------------------------------------------------------------------------------------------------------
+        var input = document.createElement('input');
+        input.type = 'file';
+
+        input.onchange = e => {
+
+            // getting a hold of the file reference
+            var file = e.target.files[0];
+
+            // setting up the reader
+            var reader = new FileReader();
+            reader.readAsText(file,'UTF-8');
+
+            // here we tell the reader what to do when it's done reading...
+            reader.onload = readerEvent => {
+                var content = readerEvent.target.result; // this is the content!
+                unsafeWindow.setQ({...qq, ...JSON.parse(content)})
+                console.log("Я устал(")
+            }
+
+        }
+
+        input.click();
+    }
+    document.addEventListener("keydown", function(e) {
+        if (e.key == "l" || e.key == "д" || e.key == "L" || e.key == "Д")
+        {
+            merge();
+        }
+        else if (e.key == "d" || e.key == "в" || e.key == "D" || e.key == "В")
+        {
+            unsafeWindow.downQ();
+        }
+    })
 
     unsafeWindow.downH = function() {
         var element = document.createElement('a');
