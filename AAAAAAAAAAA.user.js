@@ -224,12 +224,12 @@
                 else {
                     nans[qq[question]].click()
                 }
-                document.evaluate("//*[contains(@value, 'Отослать ответ')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+                //document.evaluate("//*[contains(@value, 'Отослать ответ')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
             }}
     })
 
     // Раскомментите нижнюю строчку, если хотите супербыстрые ответы
-    setTimeout(function() {
-    document.evaluate("//*[contains(@value, 'Отослать ответ')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
-    }, 200)
+    //setTimeout(function() {
+    //document.evaluate("//*[contains(@value, 'Отослать ответ')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+    //}, 200)
 })()
